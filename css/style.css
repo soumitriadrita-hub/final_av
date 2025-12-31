@@ -148,11 +148,11 @@ body {
 }
 
 @keyframes splitLeft {
-  to { transform: translateX(-30px); }
+  to { transform: translateX(-40px); }
 }
 
 @keyframes splitRight {
-  to { transform: translateX(30px); }
+  to { transform: translateX(40px); }
 }
 @keyframes fall {
   to {
