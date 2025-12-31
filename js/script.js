@@ -10,15 +10,31 @@ function launchConfetti() {
   }
 }
 
-function cakeLogic() {
-  const knife = document.getElementById("knife");
+let cakeCut = false;
+
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function cutCake(ev) {
+  ev.preventDefault();
+  if (cakeCut) return;
+  cakeCut = true;
+
   const left = document.getElementById("leftCake");
   const right = document.getElementById("rightCake");
 
-  knife.ondragend = () => {
-    left.classList.add("split-left");
-    right.classList.add("split-right");
-    launchConfetti();
+  left.classList.add("split-left");
+  right.classList.add("split-right");
+
+  launchConfetti();
+
+  setTimeout(() => {
+    window.location.href = "letter.html";
+  }, 2500);
+}
+
+  
 
     setTimeout(() => {
       window.location.href = "letter.html";
