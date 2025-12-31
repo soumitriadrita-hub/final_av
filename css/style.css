@@ -124,7 +124,36 @@ body {
   font-size: 22px;
   animation: fall 3s linear forwards;
 }
+.cake-half {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
 
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.split-left {
+  animation: splitLeft 1s forwards;
+}
+
+.split-right {
+  animation: splitRight 1s forwards;
+}
+
+@keyframes splitLeft {
+  to { transform: translateX(-30px); }
+}
+
+@keyframes splitRight {
+  to { transform: translateX(30px); }
+}
 @keyframes fall {
   to {
     transform: translateY(110vh);
