@@ -1,0 +1,133 @@
+:root {
+  --bg-main: #FFC1CC;
+  --bg-dot: #FFD1DC;
+  --hot-pink: #ff5fa2;
+  --white: #ffffff;
+  --black: #000000;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Trebuchet MS", "Arial Rounded MT Bold", Arial, sans-serif;
+  background-color: var(--bg-main);
+  background-image: radial-gradient(var(--bg-dot) 22%, transparent 23%);
+  background-size: 45px 45px;
+  text-align: center;
+}
+
+.container {
+  min-height: 100vh;
+  padding: 20px 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bounce {
+  width: 220px;
+  max-width: 75vw;
+  animation: float 2.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+  100% { transform: translateY(0); }
+}
+
+.box {
+  background: white;
+  border: 2px solid var(--hot-pink);
+  border-radius: 18px;
+  padding: 14px 22px;
+  margin: 12px 0;
+  font-weight: bold;
+  max-width: 90%;
+}
+
+.options {
+  display: flex;
+  gap: 16px;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}
+
+.black-bg {
+  background: black;
+  color: white;
+}
+
+/* 🎂 CAKE */
+.cake {
+  position: relative;
+  width: 220px;
+  height: 140px;
+  margin: 20px 0;
+}
+
+.cake-base {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: #d63b3b;
+  border-radius: 12px;
+}
+
+.cake-frosting {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50px;
+  background: white;
+  border-radius: 12px 12px 0 0;
+}
+
+.candle {
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 35px;
+  background: orange;
+}
+
+.flame {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 18px;
+  background: yellow;
+  border-radius: 50%;
+}
+
+/* Confetti */
+.confetti {
+  position: fixed;
+  top: -20px;
+  font-size: 22px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(110vh);
+    opacity: 0;
+  }
+}
