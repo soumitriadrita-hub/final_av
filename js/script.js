@@ -12,17 +12,19 @@ function launchConfetti() {
 
 function cakeLogic() {
   const knife = document.getElementById("knife");
-  const cake = document.getElementById("cake");
+  const left = document.getElementById("leftCake");
+  const right = document.getElementById("rightCake");
 
   knife.ondragend = () => {
-    cake.style.transform = "scaleX(0.9)";
+    left.classList.add("split-left");
+    right.classList.add("split-right");
     launchConfetti();
+
     setTimeout(() => {
       window.location.href = "letter.html";
     }, 2500);
   };
 }
-
 function openLetter() {
   document.getElementById("hint").style.display = "none";
   document.getElementById("letterText").style.display = "block";
