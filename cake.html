@@ -1,27 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <title>Cut the Cake</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src="js/script.js" defer></script>
 </head>
-<body onload="launchConfetti(); cakeLogic();">
-<div id="cake" class="cake"
-     ondragover="allowDrop(event)"
-     ondrop="cutCake(event)">
-    <div class="cake-frosting"></div>
-    <div class="cake-base"></div>
+<body class="theme-bg">
+
+  <!-- CONFETTI -->
+  <div id="confetti-container"></div>
+
+  <!-- CAKE -->
+  <div class="cake-wrapper">
+
+    <div id="cake"
+      class="cake"
+      ondragover="allowDrop(event)"
+      ondrop="cutCake(event)">
+
+      <!-- Candle -->
+      <div class="candle">
+        <div class="flame"></div>
+      </div>
+
+      <!-- Frosting -->
+      <div class="frosting"></div>
+
+      <!-- Cake halves -->
+      <div id="leftCake" class="cake-half left"></div>
+      <div id="rightCake" class="cake-half right"></div>
+    </div>
+
   </div>
 
-  <div id="rightCake" class="cake-half right">
-    <div class="cake-frosting"></div>
-    <div class="cake-base"></div>
+  <!-- Knife Box -->
+  <div class="knife-area">
+    <div id="knife" class="knife-box" draggable="true">🔪</div>
+    <p class="instruction">Drag the knife onto the cake!</p>
   </div>
 
-  <div class="candle"><div class="flame"></div></div>
-</div>
-
-  <div id="knife" class="box" draggable="true">🔪</div>
-  <p>Drag the knife onto the cake!</p>
-</div>
-</body>
-</html>
+  <script src="
