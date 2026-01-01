@@ -7,36 +7,37 @@
 </head>
 <body class="theme-bg">
 
-  <!-- CONFETTI -->
+  <!-- Confetti container -->
   <div id="confetti-container"></div>
 
-  <!-- CAKE -->
-  <div class="cake-wrapper">
+  <!-- MAIN -->
+  <div class="cake-page">
 
-    <div id="cake"
+    <!-- Cake -->
+    <div
+      id="cake"
       class="cake"
       ondragover="allowDrop(event)"
-      ondrop="cutCake(event)">
-
-      <!-- Candle -->
+      ondrop="cutCake(event)"
+    >
       <div class="candle">
         <div class="flame"></div>
       </div>
 
-      <!-- Frosting -->
       <div class="frosting"></div>
 
-      <!-- Cake halves -->
       <div id="leftCake" class="cake-half left"></div>
       <div id="rightCake" class="cake-half right"></div>
     </div>
 
+    <!-- Knife -->
+    <div class="knife-area">
+      <div id="knife" class="knife-box" draggable="true">🔪</div>
+      <p class="instruction">Drag the knife onto the cake!</p>
+    </div>
+
   </div>
 
-  <!-- Knife Box -->
-  <div class="knife-area">
-    <div id="knife" class="knife-box" draggable="true">🔪</div>
-    <p class="instruction">Drag the knife onto the cake!</p>
-  </div>
-
-  <script src="
+  <script src="js/script.js"></script>
+</body>
+</html>
