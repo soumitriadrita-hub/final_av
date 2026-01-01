@@ -18,7 +18,9 @@ function cutCake(e) {
     window.location.href = "letter.html";
   }, 2500);
 }
-
+document.getElementById("knife").addEventListener("dragstart", e => {
+  e.dataTransfer.setData("text/plain", "knife");
+});
 function launchConfetti() {
   for (let i = 0; i < 30; i++) {
     const heart = document.createElement("div");
