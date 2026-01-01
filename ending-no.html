@@ -1,7 +1,43 @@
-<link rel="stylesheet" href="style.css">
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    .page {
+      text-align: center;
+    }
+    img {
+      animation: bounce 2s infinite ease-in-out;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    a {
+      color: white;
+      text-decoration: underline;
+      display: block;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
 <div class="page">
-  <img src="images/ending-no.png" class="bounce" width="200">
+  <img src="images/ending-no.png" width="200">
   <h2>ENDING:</h2>
   <h3>GIRLFRIEND SAD!! GO APOLOGISE!!</h3>
-  <a href="index.html" class="button">Return to home</a>
+  <a href="index.html">Return to home</a>
 </div>
+
+</body>
+</html>
