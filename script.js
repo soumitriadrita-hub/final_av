@@ -13,7 +13,14 @@ document.getElementById("rightFrost").classList.add("split-right");
     document.body.appendChild(h);
     setTimeout(() => h.remove(), 3000);
   }
-
+document.addEventListener("DOMContentLoaded", () => {
+  const knife = document.getElementById("knife");
+  if (knife) {
+    knife.addEventListener("dragstart", e => {
+      e.dataTransfer.setData("text/plain", "knife");
+    });
+  }
+});
   setTimeout(() => {
     window.location.href = "letter.html";
   }, 2500);
