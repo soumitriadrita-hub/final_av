@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #FFC1CC;
+  background-image: radial-gradient(circle, #FFD1DC 15%, transparent 16%);
+  background-size: 40px 40px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page {
+  text-align: center;
+}
+
+.bounce {
+  animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.box {
+  background: white;
+  border: 2px solid hotpink;
+  border-radius: 20px;
+  padding: 15px 25px;
+  margin: 15px;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.button {
+  background: white;
+  border: 2px solid hotpink;
+  border-radius: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+/* Cake */
+.cake {
+  position: relative;
+  width: 240px;
+  height: 140px;
+  margin: 30px auto;
+}
+
+.frosting {
+  height: 40px;
+  background: white;
+  border-radius: 20px 20px 0 0;
+}
+
+.cake-half {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 100px;
+  background: #c62828;
+}
+
+.left { left: 0; }
+.right { right: 0; }
+
+.split-left { animation: splitL 1s forwards; }
+.split-right { animation: splitR 1s forwards; }
+
+@keyframes splitL { to { transform: translateX(-70px); } }
+@keyframes splitR { to { transform: translateX(70px); } }
+
+.candle {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  width: 14px;
+  height: 30px;
+  background: orange;
+  transform: translateX(-50%);
+}
+
+.flame {
+  width: 10px;
+  height: 14px;
+  background: yellow;
+  border-radius: 50%;
+  margin: auto;
+  animation: flicker .6s infinite alternate;
+}
+
+@keyframes flicker {
+  from { transform: scale(1); }
+  to { transform: scale(1.2); }
+}
+
+.confetti {
+  position: fixed;
+  font-size: 24px;
+  animation: fall 3s linear forwards;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh); opacity: 0; }
+}
