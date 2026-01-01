@@ -2,7 +2,9 @@
 <script src="script.js"></script>
 
 <div class="page">
-  <div class="cake" onclick="cutCake()">
+ <div class="cake"
+     ondragover="event.preventDefault()"
+     ondrop="cutCake()">
     <div class="candle"><div class="flame"></div></div>
  <div id="leftFrost" class="frosting-half left"></div>
 <div id="rightFrost" class="frosting-half right"></div>
@@ -10,6 +12,6 @@
     <div id="rightCake" class="cake-half right"></div>
   </div>
 
-  <div class="box">🔪</div>
+  <div class="box" draggable="true" id="knife">🔪</div>
   <p>Drag the knife onto the cake!</p>
 </div>
