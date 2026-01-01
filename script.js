@@ -1,4 +1,6 @@
 function cutCake() {
+  document.getElementById("leftFrost").classList.add("split-left");
+document.getElementById("rightFrost").classList.add("split-right");
   document.getElementById("leftCake").classList.add("split-left");
   document.getElementById("rightCake").classList.add("split-right");
 
