@@ -41,4 +41,3 @@ function openLetter() {
     setTimeout(() => h.remove(), 3000);
   }
 }
- 
