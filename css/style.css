@@ -10,17 +10,20 @@
   justify-content: center;
 }
 
-/* Cake wrapper */
-.cake-wrapper {
-  position: relative;
-  margin-top: 40px;
+/* Page container */
+.cake-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
 }
 
 /* Cake */
 .cake {
   position: relative;
-  width: 220px;
+  width: 240px;
   height: 140px;
+  margin-bottom: 40px;
 }
 
 /* Frosting */
@@ -43,10 +46,15 @@
   background: #c62828;
 }
 
-.left { left: 0; }
-.right { right: 0; }
+.left {
+  left: 0;
+}
 
-/* Split animations */
+.right {
+  right: 0;
+}
+
+/* Split animation */
 .split-left {
   animation: splitLeft 1s forwards;
 }
@@ -56,11 +64,11 @@
 }
 
 @keyframes splitLeft {
-  to { transform: translateX(-60px); }
+  to { transform: translateX(-70px); }
 }
 
 @keyframes splitRight {
-  to { transform: translateX(60px); }
+  to { transform: translateX(70px); }
 }
 
 /* Candle */
@@ -91,7 +99,6 @@
 
 /* Knife */
 .knife-area {
-  margin-top: 30px;
   text-align: center;
 }
 
