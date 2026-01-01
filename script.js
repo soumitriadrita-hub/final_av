@@ -27,6 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
 }
 
 function openLetter() {
+  document.getElementById("letterImage").style.display = "none";
   document.getElementById("hint").style.display = "none";
   document.getElementById("letterText").style.display = "block";
+
+  for (let i = 0; i < 30; i++) {
+    const h = document.createElement("div");
+    h.className = "confetti";
+    h.textContent = "💖";
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.top = "-20px";
+    document.body.appendChild(h);
+    setTimeout(() => h.remove(), 3000);
+  }
 }
