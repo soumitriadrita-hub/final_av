@@ -58,7 +58,15 @@ body {
   background: white;
   border-radius: 20px 20px 0 0;
 }
-
+.frosting-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 40px;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  z-index: 3;
+}
 .cake-half {
   position: absolute;
   bottom: 0;
